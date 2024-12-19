@@ -38,6 +38,6 @@ img {
     text-decoration: underline;
 }
 
-p{
+p,li{
     text-align: justify;
 }
