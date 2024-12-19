@@ -16,6 +16,12 @@ main > div{
     margin: 0 auto;
 }
 
+
+img {
+    max-width: 500px;
+    height: auto;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
