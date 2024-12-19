@@ -20,3 +20,7 @@ main {
 #menu-contenido {
     min-width: 346.63px;
 }
+
+.nav-item:hover{
+    background-color: #24232c;
+}
