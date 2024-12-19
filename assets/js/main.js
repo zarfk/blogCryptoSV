@@ -17,6 +17,8 @@ document.addEventListener('click', (e) => {
     if (e.target.id === 'btn-niip') cargarContenido('main', 'niip');
     if (e.target.id === 'btn-ipc') cargarContenido('main', 'ipc');
     if (e.target.id === 'btn-pib') cargarContenido('main', 'pib');
+
+    if (e.target.id === 'btn-pdf') print(e.target);
 });
 
 function cargarContenido(id, url_prompt){
