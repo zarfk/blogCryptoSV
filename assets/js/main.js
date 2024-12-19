@@ -1,8 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.getElementById('menu');
+    // Cargar el contenido de la página
+    cargarContenido('menu', 'menu');  
+    cargarContenido('footer', 'footer');  
+  });
+
+document.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    if (e.target.id === 'btn-home') cargarContenido('main', 'home');
+    if (e.target.id === 'btn-analisis') cargarContenido('main', 'analisis');
+    if (e.target.id === 'btn-btc') cargarContenido('main', 'btc');
+    if (e.target.id === 'btn-rin') cargarContenido('main', 'rin');
+    if (e.target.id === 'btn-dep') cargarContenido('main', 'dep');
+    if (e.target.id === 'btn-niip') cargarContenido('main', 'niip');
+    if (e.target.id === 'btn-ipc') cargarContenido('main', 'ipc');
+    if (e.target.id === 'btn-pib') cargarContenido('main', 'pib');
+});
+
+function cargarContenido(id, url_prompt){
+    let archivo = document.getElementById(id);
   
-    // Ruta del archivo HTML de menu
-    const url = '../../features/menu/menu.html';
+    // Ruta del archivo HTML de archivo
+    const url = `../../features/${url_prompt}/${url_prompt}.html`;
   
     // Cargar el contenido
     fetch(url)
@@ -12,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(html => {
         // Insertar el contenido en el contenedor
-        menu.innerHTML = "";
-        menu.innerHTML = html;
+        archivo.innerHTML = "";
+        archivo.innerHTML = html;
       })
       .catch(error => {
         console.error('Ocurrió un error:', error);
       });
-  });
+}
   
