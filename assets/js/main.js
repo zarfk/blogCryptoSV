@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Cargar el contenido de la página
     cargarContenido('menu', 'menu');  
+    cargarContenido('main', 'home');
     cargarContenido('footer', 'footer');  
   });
 
